@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.tsx
+import React, {useState} from 'react';
+import { UserProvider } from './contex/userContext';
+import UserList from './ui/components/userList/userList';
+import AddUserForm from './ui/components/createUser/createUser';
+import Header from './ui/components/header/header';
+import Btn from './ui/components/btn/btn'
 
-function App() {
+const App = () => {
+  const [isFormVisible, setIsFormVisible] = useState(false);
+
+  const toggleFormVisibility = () => setIsFormVisible(!isFormVisible);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserProvider>
+      <div className="app">
+        <Header />
+        <Btn type="primary" value="Agregar Contactos" onClick={toggleFormVisibility}/>
+        <UserList />
+        <AddUserForm visible={isFormVisible} onClose={() => setIsFormVisible(false)} /> 
+      </div>
+    </UserProvider>
   );
-}
+};
 
 export default App;

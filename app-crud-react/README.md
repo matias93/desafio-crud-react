@@ -1,3 +1,19 @@
+# Proyecto en React 
+ 
+Este proyecto está desarrollado en React y se utiliza npm para levantarlo. 
+ 
+## Estructura de carpetas 
+ 
+- **context**: En esta carpeta se encuentran los archivos donde se gatillan las llamadas a la API y se maneja el estado de la aplicación. 
+ 
+- **ui**: Aquí se encuentran los componentes que conforman la vista del administrador de usuarios. 
+ 
+- **models**: En esta carpeta se encuentran las interfaces utilizadas en el proyecto. 
+ 
+## Instrucciones para levantar el proyecto 
+ 
+Para levantar el proyecto, puedes utilizar el comando  npm start . 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
